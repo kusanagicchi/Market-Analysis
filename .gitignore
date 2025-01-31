@@ -1,0 +1,14 @@
+# Put the following in the gitignore
+/images
+/.venv
+*.csv
+.wolf*
+
+
+
+# Ignores .csv files, the images folder, and your environment (to come)
+# You can create this manually or use the following plugins in VSCode
+# piotrpalarz.vscode-gitignore-generator - creates the file for you
+# Michelemelluso.gitignore - you can right click on any file or folder to add it to your gitignore
+# Just have me check this. If you did it right, you won't be able to add these files via a commit
+# To understand more go over this blog post - https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/
