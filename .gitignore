@@ -3,6 +3,7 @@
 /.venv
 *.csv
 .wolf*
+settings.json
 
 
 

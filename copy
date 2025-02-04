@@ -1,0 +1,26 @@
+import requests
+from bs4 import BeautifulSoup
+
+base = 'https://books.toscrape.com/index.html'
+
+url = "https://books.toscrape.com/catalogue/avatar-the-last-airbender-smoke-and-shadow-part-3-smoke-and-shadow-3_881/index.html"
+page = requests.get(url)
+soup = BeautifulSoup(page.content, 'html.parser')
+
+
+upc = soup.find_all('td')
+lefttable = soup.find_all('th')
+title = soup.find('h1')
+desc = soup.select_one('#content_inner > article > p')
+img = soup.select_one('#product_gallery > div > div > div > img')
+#fullimgurl = "https://books.toscrape.com/" + img
+
+
+print(url)
+print(title.string)
+for result, result2 in zip(lefttable, upc):
+    print(result.string+': '+ result2.string)
+print(desc.string)
+print(img)
+
+#print(upc.string)
